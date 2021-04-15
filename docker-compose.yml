@@ -1,5 +1,4 @@
 version: "3.7"
-
 services:
     reverse-proxy:
         image: "jwilder/nginx-proxy:latest"
@@ -33,12 +32,12 @@ services:
                   - "reverse-proxy"
               networks: 
                   - "net"
-                  volumes:
-                    certs:
-                    html:
-                    vhost:
-                    dhparam:
-                      
-                  networks:
-                    net:
-                      external: true
+volumes:
+  certs:
+  html:
+  vhost:
+  dhparam:
+    
+networks:
+  net:
+    external: true
